@@ -14,6 +14,9 @@ from pathlib import Path
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -26,7 +29,7 @@ SECRET_KEY = 'django-insecure-$9xu2c))&n88=1g1xmtewbr#^hjh1e@o18&sz!2^hl$@%=^-*r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['djoperkins.pythonanywhere.com']
 
 
 # Application definition
@@ -79,7 +82,7 @@ WSGI_APPLICATION = 'americano.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': str(BASE_DIR / 'db.sqlite3'),
     }
 }
 
@@ -121,11 +124,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = '/home/Djoperkins/AmericanoApp/static'
+
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+
 
 # # MEDIA_URL='/img/'
 
-# EMAIL_BACKEND  =  "django.core.mail.backends.filebased.EmailBackend" 
+# EMAIL_BACKEND  =  "django.core.mail.backends.filebased.EmailBackend"
 # EMAIL_FILE_PATH  =  os.path.join( BASE_DIR , "sent_emails")
 
 
