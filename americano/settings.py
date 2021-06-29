@@ -29,7 +29,8 @@ SECRET_KEY = 'django-insecure-$9xu2c))&n88=1g1xmtewbr#^hjh1e@o18&sz!2^hl$@%=^-*r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['djoperkins.pythonanywhere.com']
+ALLOWED_HOSTS = ['djoperkins.pythonanywhere.com','127.0.0.1', 'localhost']
+# ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -137,3 +138,10 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+GOOGLE_API_KEY = "XXX"
+API_SERVICE_NAME = "youtube"
+API_VERSION = "v3"
+CHANNEL_ID = 'XXX'
