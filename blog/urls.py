@@ -19,4 +19,6 @@ urlpatterns = [
     path('all_videos/', views.all_videos, name='all_videos'),
     path('all_photos/', views.all_photos, name='all_photos'),
     path('all_albums/', views.all_albums, name='all_albums'),
+    path('bio/', views.bio, name='bio'),
+
 ]

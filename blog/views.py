@@ -5,6 +5,10 @@ from django.shortcuts import render
 def home(request):
 	return render(request, 'index.html')
 
+def bio(request):
+
+	return render(request, 'more.html', {'bio':True})
+
 def all_actus(request):
 
 	return render(request, 'more.html', {'actus':True})
