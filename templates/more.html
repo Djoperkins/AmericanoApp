@@ -30,6 +30,7 @@
             <div class="row">
                 <div class="col-md-12">
 
+                {% if actus == True %}
                     <h1>Actus</h1>
 
                 {% elif videos == True %}
@@ -63,7 +64,7 @@
 
                         {% if actus == True %}
 
-                            <span>Vidéos</span>
+                            <span>Actus</span>
 
                         {% elif videos == True %}
 
@@ -266,36 +267,41 @@
                     <!-- Filter -->
                     <div class="button-group filters-button-group">
                         <a class="button is-checked" data-filter="*"><span>SHOW ALL</span></a>
-                        <a class="button" data-filter=".design"><span>DESIGN</span></a>
-                        <a class="button" data-filter=".development"><span>DEVELOPMENT</span></a>
-                        <a class="button" data-filter=".marketing"><span>MARKETING</span></a>
-                        <a class="button" data-filter=".seo"><span>SEO</span></a>
+                        <a class="button" data-filter=".design"><span>Making Off</span></a>
+                        <a class="button" data-filter=".development"><span>Affiche Clips</span></a>
+                        <a class="button" data-filter=".marketing"><span>Shooting</span></a>
+                        <!-- <a class="button" data-filter=".seo"><span>SEO</span></a> -->
                     </div> <!-- end of button group -->
                     <div class="grid">
                         <div class="element-item development">
-                            <a class="popup-with-move-anim" href="#project-1"><div class="element-item-overlay"><span>Online Banking</span></div><img src="{% static 'images/project-1.jpg'%}" alt="alternative"></a>
+                            <a class="popup-with-move-anim" href="#project-1"><div class="element-item-overlay"><span>Affiche Clips</span></div><img src="{% static 'images/Shooting/two.jpg'%}" alt="alternative"></a>
                         </div>
+                        <div class="element-item marketing">
+                            <a class="popup-with-move-anim" href="#project-2"><div class="element-item-overlay"><span>Shooting</span></div><img src="{% static 'images/Shooting/one.jpg'%}" alt="alternative"></a>
+                        </div>
+                        <div class="element-item marketing">
+                            <a class="popup-with-move-anim" href="#project-3"><div class="element-item-overlay"><span>Shooting</span></div><img src="{% static 'images/Shooting/four.jpg'%}" alt="alternative"></a>
+                        </div>
+                        <div class="element-item design">
+                            <a class="popup-with-move-anim" href="#project-4"><div class="element-item-overlay"><span>Making Off</span></div><img src="{% static 'images/Making Off/esimbi3.jpeg'%}" alt="alternative"></a>
+                        </div>
+
+
                         <div class="element-item development">
-                            <a class="popup-with-move-anim" href="#project-2"><div class="element-item-overlay"><span>Classic Industry</span></div><img src="{% static 'images/project-2.jpg'%}" alt="alternative"></a>
+                            <a class="popup-with-move-anim" href="#project-5"><div class="element-item-overlay"><span>Affiche Clips</span></div><img src="{% static 'images/Shooting/bio.jpg'%}" alt="alternative"></a>
                         </div>
-                        <div class="element-item design development marketing">
-                            <a class="popup-with-move-anim" href="#project-3"><div class="element-item-overlay"><span>BoomBap Audio</span></div><img src="{% static 'images/project-3.jpg'%}" alt="alternative"></a>
+                        <div class="element-item marketing">
+                            <a class="popup-with-move-anim" href="#project-6"><div class="element-item-overlay"><span>Shooting</span></div><img src="{% static 'images/Shooting/three.jpg'%}" alt="alternative"></a>
                         </div>
-                        <div class="element-item design development marketing">
-                            <a class="popup-with-move-anim" href="#project-4"><div class="element-item-overlay"><span>Van Moose</span></div><img src="{% static 'images/project-4.jpg'%}" alt="alternative"></a>
+                        <div class="element-item marketing">
+                            <a class="popup-with-move-anim" href="#project-7"><div class="element-item-overlay"><span>Shooting</span></div><img src="{% static 'images/Shooting/bio-2.jpg'%}" alt="alternative"></a>
                         </div>
-                        <div class="element-item design development marketing seo">
-                            <a class="popup-with-move-anim" href="#project-5"><div class="element-item-overlay"><span>Joy Moments</span></div><img src="{% static 'images/project-5.jpg'%}" alt="alternative"></a>
+                        <div class="element-item design">
+                            <a class="popup-with-move-anim" href="#project-8"><div class="element-item-overlay"><span>Making Off</span></div><img src="{% static 'images/Making Off/esimbi1.jpeg'%}" alt="alternative"></a>
                         </div>
-                        <div class="element-item design marketing seo">
-                            <a class="popup-with-move-anim" href="#project-6"><div class="element-item-overlay"><span>Spark Events</span></div><img src="{% static 'images/project-6.jpg'%}" alt="alternative"></a>
-                        </div>
-                        <div class="element-item design marketing">
-                            <a class="popup-with-move-anim" href="#project-7"><div class="element-item-overlay"><span>Casual Wear</span></div><img src="{% static 'images/project-8.jpg'%}" alt="alternative"></a>
-                        </div>
-                        <div class="element-item design marketing">
-                            <a class="popup-with-move-anim" href="#project-8"><div class="element-item-overlay"><span>Zazoo Apps</span></div><img src="{% static 'images/project-8.jpg'%}" alt="alternative"></a>
-                        </div>
+                        
+
+                        
                     </div> <!-- end of grid -->
                     <!-- <a class="btn-outline-reg back" href="{% url 'all_videos' %}">Tous les vidéos</a> -->
                     <!-- end of filter -->
@@ -308,9 +314,9 @@
                     <br>
                     <a class="btn-outline-reg back" href="{% url 'all_photos' %}">Plus des photos</a>
                     </div>
-                </div> 
-            </div>  -->
-            <!-- end of row -->
+                </div>
+            </div> -->
+             <!-- end of row -->
 
         </div> <!-- end of container -->
     </div> <!-- end of filter -->
@@ -323,19 +329,19 @@
         <div class="row">
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-8">
-                <img class="img-fluid" src="{% static 'images/project-1.jpg'%}" alt="alternative">
+                <img class="img-fluid" src="{% static 'images/Shooting/two.jpg'%}" alt="alternative">
             </div> <!-- end of col -->
             <div class="col-lg-4">
-                <h3>Online Banking</h3>
+                <h3>Affiche Clips </h3>
                 <hr class="line-heading">
-                <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
+                <p>Need a solid foundation for your business growth plans? Americano will help you manage sales and meet your current needs</p>
                 <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
                 <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
+                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Americano will help you manage sales and meet your current requirements.</p>
                     <p class="testimonial-author">General Manager</p>
                 </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+                <!-- <a class="btn-solid-reg" href="#your-link">DETAILS</a>  -->
+                <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of lightbox-basic -->
@@ -346,19 +352,20 @@
         <div class="row">
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-8">
-                <img class="img-fluid" src="{% static 'images/project-2.jpg'%}" alt="alternative">
+                <img class="img-fluid" src="{% static 'images/Shooting/one.jpg'%}" alt="alternative">
             </div> <!-- end of col -->
             <div class="col-lg-4">
-                <h3>Classic Industry</h3>
+                <h3>Shooting</h3>
                 <hr class="line-heading">
                 <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
+                <p>Need a solid foundation for your business growth plans? Americano will help you manage sales and meet your current needs</p>
                 <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
                 <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
+                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Americano will help you manage sales and meet your current requirements.</p>
                     <p class="testimonial-author">General Manager</p>
                 </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+                <!-- <a class="btn-solid-reg" href="#your-link">DETAILS</a>  -->
+                <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of lightbox-basic -->
@@ -369,19 +376,20 @@
         <div class="row">
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-8">
-                <img class="img-fluid" src="{% static 'images/project-3.jpg'%}" alt="alternative">
+                <img class="img-fluid" src="{% static 'images/Shooting/four.jpg'%}" alt="alternative">
             </div> <!-- end of col -->
             <div class="col-lg-4">
-                <h3>BoomBap Audio</h3>
+                <h3>Shooting</h3>
                 <hr class="line-heading">
                 <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
+                <p>Need a solid foundation for your business growth plans? Americano will help you manage sales and meet your current needs</p>
                 <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
                 <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
+                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Americano will help you manage sales and meet your current requirements.</p>
                     <p class="testimonial-author">General Manager</p>
                 </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+                <!-- <a class="btn-solid-reg" href="#your-link">DETAILS</a>  -->
+                <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of lightbox-basic -->
@@ -392,42 +400,44 @@
         <div class="row">
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-8">
-                <img class="img-fluid" src="{% static 'images/project-4.jpg'%}" alt="alternative">
+                <img class="img-fluid" src="{% static 'images/Making Off/esimbi3.jpeg'%}" alt="alternative">
             </div> <!-- end of col -->
             <div class="col-lg-4">
-                <h3>Van Moose</h3>
+                <h3>Making Off</h3>
                 <hr class="line-heading">
                 <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
+                <p>Need a solid foundation for your business growth plans? Americano will help you manage sales and meet your current needs</p>
                 <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
                 <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
+                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Americano will help you manage sales and meet your current requirements.</p>
                     <p class="testimonial-author">General Manager</p>
                 </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+                <!-- <a class="btn-solid-reg" href="#your-link">DETAILS</a>  -->
+                <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of lightbox-basic -->
     <!-- end of lightbox -->
 
-    <!-- Lightbox -->
+<!-- Lightbox -->
     <div id="project-5" class="lightbox-basic zoom-anim-dialog mfp-hide">
         <div class="row">
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-8">
-                <img class="img-fluid" src="{% static 'images/project-5.jpg'%}" alt="alternative">
+                <img class="img-fluid" src="{% static 'images/Shooting/bio.jpg'%}" alt="alternative">
             </div> <!-- end of col -->
             <div class="col-lg-4">
-                <h3>Joy Moments</h3>
+                <h3>Affiche Clips</h3>
                 <hr class="line-heading">
-                <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
+                
+                <p>Need a solid foundation for your business growth plans? Americano will help you manage sales and meet your current needs</p>
                 <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
                 <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
+                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Americano will help you manage sales and meet your current requirements.</p>
                     <p class="testimonial-author">General Manager</p>
                 </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+                <!-- <a class="btn-solid-reg" href="#your-link">DETAILS</a>  -->
+                <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of lightbox-basic -->
@@ -438,19 +448,20 @@
         <div class="row">
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-8">
-                <img class="img-fluid" src="{% static 'images/project-6.jpg'%}" alt="alternative">
+                <img class="img-fluid" src="{% static 'images/Shooting/three.jpg'%}" alt="alternative">
             </div> <!-- end of col -->
             <div class="col-lg-4">
-                <h3>Spark Events</h3>
+                <h3>Shooting</h3>
                 <hr class="line-heading">
                 <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
+                <p>Need a solid foundation for your business growth plans? Americano will help you manage sales and meet your current needs</p>
                 <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
                 <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
+                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Americano will help you manage sales and meet your current requirements.</p>
                     <p class="testimonial-author">General Manager</p>
                 </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+                <!-- <a class="btn-solid-reg" href="#your-link">DETAILS</a>  -->
+                <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of lightbox-basic -->
@@ -461,19 +472,20 @@
         <div class="row">
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-8">
-                <img class="img-fluid" src="{% static 'images/project-7.jpg'%}" alt="alternative">
+                <img class="img-fluid" src="{% static 'images/Shooting/bio-2.jpg'%}" alt="alternative">
             </div> <!-- end of col -->
             <div class="col-lg-4">
-                <h3>Casual Wear</h3>
+                <h3>Shooting</h3>
                 <hr class="line-heading">
                 <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
+                <p>Need a solid foundation for your business growth plans? Americano will help you manage sales and meet your current needs</p>
                 <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
                 <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
+                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Americano will help you manage sales and meet your current requirements.</p>
                     <p class="testimonial-author">General Manager</p>
                 </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+                <!-- <a class="btn-solid-reg" href="#your-link">DETAILS</a>  -->
+                <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of lightbox-basic -->
@@ -484,25 +496,81 @@
         <div class="row">
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-8">
-                <img class="img-fluid" src="{% static 'images/project-8.jpg' %}" alt="alternative">
+                <img class="img-fluid" src="{% static 'images/Making Off/esimbi1.jpeg'%}" alt="alternative">
             </div> <!-- end of col -->
             <div class="col-lg-4">
-                <h3>Zazoo Apps</h3>
+                <h3>Making Off</h3>
                 <hr class="line-heading">
-                <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
+                <h6>Making Off du Clip Esimbi (Diplômé)</h6>
+                <p>Need a solid foundation for your business growth plans? Americano will help you manage sales and meet your current needs</p>
                 <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
                 <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
+                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Americano will help you manage sales and meet your current requirements.</p>
                     <p class="testimonial-author">General Manager</p>
                 </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+                <!-- <a class="btn-solid-reg" href="#your-link">DETAILS</a>  -->
+                <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of lightbox-basic -->
     <!-- end of lightbox -->
-    <!-- end of project lightboxes -->
+{% elif actus == True %}
 
+    <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="text-container">
+                        <div class="section-title">
+                            <h4>BIOGRAPHIE</h4>
+                        </div>
+                        
+                        <div> 
+                            <h4>Jeunesse</h4>
+
+                            <p class="testimonial-text"><strong>Américano</strong> est un artiste rappeur congolais, né le 13 juin 1997 à la commune de Ngaliema, à Kinshasa capitale de la République Démocratique du Congo. Ses parents sont congolais de la RDC. Il est passionné de musique depuis son plus jeune âge...
+                            <strong>Américano</strong>, de son vrai nom <b>Célestin Katuina Loata</b>.</p>
+                            <p class="testimonial-text">Le jeune <strong>Américano</strong> se consacre à ses études où il excelle en science juridique.</p>
+
+                            <h4>Début dans le rap</h4>
+
+                            <p class="testimonial-text">Son goût de faire le rap naît durant la fin de son adolescence. Il s'inspire notamment des rappeurs français, <b>La Fouine</b>, <b>Youssoupha</b>, <b>Booba</b>, <b> Kaaris</b>, <b>Gims</b> et autres à qui il emprunte son style du rap, Mais le jeune <strong>Américano</strong> kiffe beaucoup plus la musique de <b>Youssoupha</b>.</p>
+                        </div>
+                        <div tabindex="-1"> 
+                            <h4>Carrière musicale</h4>
+
+                            <p class="testimonial-text"><strong>En décembre 2016</strong>, il fait sa toute première fois <b>"La Ligue"</b> en collaboration avec ses condisciples.</p>
+
+                            <p class="testimonial-text">En mars 2017, il émet deux chansons, l'une <b>"Mon Amour"</b> avec son grand du quartier nommé <b>Reakon</b>, et l'autre il collabore avec ses deux potes du quartier toujours, <b>T3</b> au micro super star et <b>Christ Love</b> intitulée <b>"Elengi Suka Te"</b>.</p>
+
+                            <h4>MemeMoraleMusic</h4>
+
+                            <p class="testimonial-text"><strong>Américano</strong> et ses deux derniers potes, <b>T3</b> et <b>Christ Love</b> ainsi que <b>Mélancolique Christian Bagueya</b> créent un groupe musical au nom de <b>MemeMoraleMusic ( MMMusic ou MMM )</b> dont il est le visionnaire.
+                            L'artiste <b>T3</b> vient d'être suspendu de manière indéterminée suite à sa méconduite dans le groupe... celui-ci juge bon de quitter directement le groupe <b>MMMusic</b> pour évoluer en solo. <strong>Américano</strong>, <b>Christ Love</b> et <b>Mélancolique</b> continuent d'évoluer en commun. Ce trio lance deux chansons <b>"Atterrissage"</b> et <b>"Musuku"</b>.</p>
+                            <p class="testimonial-text"><strong>Au mois de juillet 2017</strong>, <strong>Américano</strong> assure pour la toute première fois tout seul la chanson <b>"Esimbi Diplôme"</b> à l'effet de célébrer leur obtention de diplômes d'État avec ses condisciples suite à leur réussite aux épreuves nationales. Et cette chanson est dédiée à tous les titulaires d'un diplôme d'État...
+                            </p>
+
+                            <h4>Américano en solo</h4>
+
+                            <p class="testimonial-text"><strong>En novembre 2019</strong>, <strong>Américano</strong> surprend le monde avec une très belle chanson <b>"Ça va Luyindama"</b>. Une chanson composée à l'effet de rendre hommage à l'international joueur congolais <b>Christian Luyindama</b>, le défenseur central de l'équipe nationale de la République Démocratique du Congo et joueur du club Galatasaray.
+                            </p>
+                            <br>
+                            <p class="testimonial-text"><strong>En mars 2020</strong>, il lance <b>"Dédicaces"</b>. Une chanson pour satisfaire ses fans qui souhaitent être dédicacés par le jeune <strong>Américano</strong>.
+                            </p>
+                            <p class="testimonial-text"><strong>Au mois d'août</strong>, il collabore avec son ancien collaborateur du groupe <b>MMMusic</b>, <b>T3</b> au micro et les deux autres artistes dont <b>Obi Scratch</b> et <b>Par La Tête</b>. Les quatre émettent un joli tube <b>"À chacun son tour"</b>.
+                            </p>
+                            <p class="testimonial-text"><strong>En décembre 2020</strong>, le jeune rappeur <strong>Américano</strong> lance <b>"Tika Buzoba"</b>. La chanson qui parle de réalité de son  pays...</p>
+                        </div>
+                        <!-- <div class="testimonial-author">Louise Donovan - CEO</div> -->
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-7">
+                    <div class="image-container">
+                        <img class="img-fluid" src="{% static 'images/bio-2.jpg'%}" alt="alternative">
+                        <!-- <img class="img-fluid" src="{% static 'images/intro-office.jpg'%}" alt="alternative"> -->
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
 
 {% endif %}
 

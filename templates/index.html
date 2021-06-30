@@ -37,35 +37,24 @@
                     <div class="text-container">
                         <div class="section-title">BIOGRAPHIE</div>
                         
-                        <h4>Jeunesse</h4>
+                        <div> 
+                            <h4>Jeunesse</h4>
 
-                        <p class="testimonial-text">Américano est un artiste rappeur congolais...
-                        Le jeune Américano se consacre à ses études où il excelle en science juridique.</p>
+                            <p class="testimonial-text">Américano est un artiste rappeur congolais, né le 13 juin 1997 à la commune de Ngaliema, à Kinshasa capitale de la République Démocratique du Congo. Ses parents sont congolais de la RDC. Il est passionné de musique depuis son plus jeune âge...
+                            Américano, de son vrai nom Célestin Katuina Loata.</p>
+                            <p>Le jeune Américano se consacre à ses études où il excelle en science juridique.</p>
 
-                        <h4>Début dans le rap</h4>
+                            <h4>Début dans le rap</h4>
 
-                        <p class="testimonial-text">Son goût de faire le rap naît durant la fin de son adolescence. Il s'inspire..., Mais le jeune Américano kiffe beaucoup plus la musique de Youssoupha.</p>
-
-                        <h4>Carrière musicale</h4>
-
-                        <p class="testimonial-text">En décembre 2016, il fait sa toute première fois..., Intitulée " Elengi Suka Te".</p>
-
-                        <h4>MemeMoraleMusic</h4>
-
-                        <p class="testimonial-text">Américano et ses deux derniers potes, T3...<br>
-                        ...avec Christ Love dans le groupe et sortent" La tête, épaules"...</p>
-
-                        <h4>Américano en solo</h4>
-
-                        <p class="testimonial-text">En novembre 2019, Américano surprend...<br>
-                        En décembre 2020, Américano... une chanson qui parle de la réalité de son pays.</p>
-                        
+                            <p class="testimonial-text">Son goût de faire le rap naît durant la fin de son adolescence. Il s'inspire notamment des rappeurs français, La Fouine, Youssoupha, Booba, Kaaris, Gims et autres à qui il emprunte son style du rap, Mais le jeune Américano kiffe beaucoup plus la musique de Youssoupha.</p>
+                        </div>
+                        <a class="btn btn-link" href="{% url 'all_actus' %}" role="button">Afficher plus ...</a>
                         <!-- <div class="testimonial-author">Louise Donovan - CEO</div> -->
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-7">
                     <div class="image-container">
-                        <img class="img-fluid" src="{% static 'images/bio.jpg'%}" alt="alternative">
+                        <img class="img-fluid" src="{% static 'images/Shooting/bio.jpg'%}" alt="alternative">
                         <!-- <img class="img-fluid" src="{% static 'images/intro-office.jpg'%}" alt="alternative"> -->
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
@@ -472,26 +461,33 @@
             <div class="row">
                 <div class="col-lg-12">
                     <!-- Filter -->
-                    <div class="button-group filters-button-group">
+                    <!-- <div class="button-group filters-button-group">
                         <a class="button is-checked" data-filter="*"><span>SHOW ALL</span></a>
-                        <a class="button" data-filter=".design"><span>DESIGN</span></a>
-                        <a class="button" data-filter=".development"><span>DEVELOPMENT</span></a>
-                        <a class="button" data-filter=".marketing"><span>MARKETING</span></a>
+                        <a class="button" data-filter=".design"><span>Making Off</span></a>
+                        <a class="button" data-filter=".development"><span>Affiche Clips</span></a>
+                        <a class="button" data-filter=".marketing"><span>Shooting</span></a>
                         <a class="button" data-filter=".seo"><span>SEO</span></a>
-                    </div> <!-- end of button group -->
+                    </div> --> <!-- end of button group -->
                     <div class="grid">
                         <div class="element-item development">
-                            <a class="popup-with-move-anim" href="#project-1"><div class="element-item-overlay"><span>Online Banking</span></div><img src="{% static 'images/bio.jpg'%}" alt="alternative"></a>
+                            <a class="popup-with-move-anim" href="#project-2"><div class="element-item-overlay"><span>Affiche Clips</span></div><img src="{% static 'images/Shooting/two.jpg'%}" alt="alternative"></a>
                         </div>
-                        <div class="element-item development">
-                            <a class="popup-with-move-anim" href="#project-2"><div class="element-item-overlay"><span>Classic Industry</span></div><img src="{% static 'images/one.jpg'%}" alt="alternative"></a>
+                        <div class="element-item marketing">
+                            <a class="popup-with-move-anim" href="#project-3"><div class="element-item-overlay"><span>Shooting</span></div><img src="{% static 'images/Shooting/one.jpg'%}" alt="alternative"></a>
                         </div>
-                        <div class="element-item design development marketing">
-                            <a class="popup-with-move-anim" href="#project-3"><div class="element-item-overlay"><span>BoomBap Audio</span></div><img src="{% static 'images/two.jpg'%}" alt="alternative"></a>
+                        <div class="element-item marketing">
+                            <a class="popup-with-move-anim" href="#project-4"><div class="element-item-overlay"><span>Shooting</span></div><img src="{% static 'images/Shooting/four.jpg'%}" alt="alternative"></a>
                         </div>
-                        <div class="element-item design development marketing">
-                            <a class="popup-with-move-anim" href="#project-4"><div class="element-item-overlay"><span>Van Moose</span></div><img src="{% static 'images/intro.jpg'%}" alt="alternative"></a>
+                        <div class="element-item design">
+                            <a class="popup-with-move-anim" href="#project-1"><div class="element-item-overlay"><span>Making Off</span></div><img src="{% static 'images/Making Off/esimbi3.jpeg'%}" alt="alternative"></a>
                         </div>
+                        
+                        <!-- <div class="element-item design seo">
+                            <a class="popup-with-move-anim" href="#project-4"><div class="element-item-overlay"><span>Shooting</span></div><img src="{% static 'images/three.jpg'%}" alt="alternative"></a>
+                        </div>
+                        <div class="element-item development seo">
+                            <a class="popup-with-move-anim" href="#project-4"><div class="element-item-overlay"><span>Shooting</span></div><img src="{% static 'images/four.jpg'%}" alt="alternative"></a>
+                        </div> -->
                         
                     </div> <!-- end of grid -->
                     <!-- <a class="btn-outline-reg back" href="{% url 'all_videos' %}">Tous les vidéos</a> -->
@@ -519,10 +515,10 @@
         <div class="row">
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-8">
-                <img class="img-fluid" src="{% static 'images/bio.jpg'%}" alt="alternative">
+                <img class="img-fluid" src="{% static 'images/Shooting/bio.jpg'%}" alt="alternative">
             </div> <!-- end of col -->
             <div class="col-lg-4">
-                <h3>Online Banking</h3>
+                <h3>Making Off</h3>
                 <hr class="line-heading">
                 <h6>Strategy Development</h6>
                 <p>Need a solid foundation for your business growth plans? Americano will help you manage sales and meet your current needs</p>
@@ -542,10 +538,10 @@
         <div class="row">
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-8">
-                <img class="img-fluid" src="{% static 'images/one.jpg'%}" alt="alternative">
+                <img class="img-fluid" src="{% static 'images/Shooting/one.jpg'%}" alt="alternative">
             </div> <!-- end of col -->
             <div class="col-lg-4">
-                <h3>Classic Industry</h3>
+                <h3>Affiche Clips</h3>
                 <hr class="line-heading">
                 <h6>Strategy Development</h6>
                 <p>Need a solid foundation for your business growth plans? Americano will help you manage sales and meet your current needs</p>
@@ -565,10 +561,10 @@
         <div class="row">
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-8">
-                <img class="img-fluid" src="{% static 'images/two.jpg'%}" alt="alternative">
+                <img class="img-fluid" src="{% static 'images/Shooting/two.jpg'%}" alt="alternative">
             </div> <!-- end of col -->
             <div class="col-lg-4">
-                <h3>BoomBap Audio</h3>
+                <h3>Shooting</h3>
                 <hr class="line-heading">
                 <h6>Strategy Development</h6>
                 <p>Need a solid foundation for your business growth plans? Americano will help you manage sales and meet your current needs</p>
@@ -588,10 +584,10 @@
         <div class="row">
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-8">
-                <img class="img-fluid" src="{% static 'images/intro.jpg'%}" alt="alternative">
+                <img class="img-fluid" src="{% static 'images/Shooting/intro.jpg'%}" alt="alternative">
             </div> <!-- end of col -->
             <div class="col-lg-4">
-                <h3>Van Moose</h3>
+                <h3>Shooting</h3>
                 <hr class="line-heading">
                 <h6>Strategy Development</h6>
                 <p>Need a solid foundation for your business growth plans? Americano will help you manage sales and meet your current needs</p>
